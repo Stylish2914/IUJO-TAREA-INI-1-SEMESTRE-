@@ -1,0 +1,23 @@
+función factorial(n)
+    resultado = 1
+    para i desde 1 hasta n hacer
+        resultado = resultado * i
+    fin para
+    retornar resultado
+fin función
+
+función combinatoria(n, r)
+    si r > n entonces
+        retornar 0
+    fin si
+    retornar factorial(n) / (factorial(r) * factorial(n - r))
+fin función
+
+inicio
+    escribir "Introduce el valor de n: "
+    leer n
+    escribir "Introduce el valor de r: "
+    leer r
+
+    escribir "Combinatoria (nCr) = ", combinatoria(n, r)
+fin
